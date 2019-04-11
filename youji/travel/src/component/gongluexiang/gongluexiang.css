@@ -1,0 +1,111 @@
+.glx-container{
+    width: 100%;
+    min-width: 1200px;
+    background: #f7f7f7;
+    margin-top: 80px;
+}
+.glx-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.glx-left{
+    width: 990px;
+    height: 100%;
+    /* border: 1px solid blue; */
+   
+}
+.glx-header{
+    width: 100%;
+    background: #fff;
+}
+.glx-img{
+  width: 100%;
+  height: 300px;
+}
+.glx-h3{
+    margin-top: -100px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.glx-name{
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 50px 30px 50px;
+    color: #666;
+    line-height: 24px;
+    font-size: 18px;
+    margin-top: 85px;
+}
+.glx-content{
+  padding: 30px 0  0 0;
+}
+.line{
+    background: #22c322;
+    width: 100px;
+    height: 3px;
+    margin: 0 auto; 
+}
+.title-coat{
+    font-size: 24px;
+    color: #333;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.rank{
+    color: #333;
+    font-style: italic;
+    font-family: 'Simsun';
+}
+.num{
+    font-style: italic;
+    font-family: 'Simsun';
+    line-height: 24px;
+    margin-right: 20px;
+}
+.point-name{
+    display: inline-block;
+    font-size: 24px;
+    color: #333;
+}
+.glx-con-img{
+    background: #fff;
+}
+.glx-text{
+    width: 360px;
+    padding: 40px 40px 0 60px;
+    color: #666;
+    line-height: 28px;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    display: inline-block;
+}
+.glx-bei-img{
+    vertical-align: top;
+    width:600px;
+    height: 450px;
+}
+.glx-right{
+    background: #fff;
+    padding:30px 30px 10px 30px;
+    text-align: center;
+    position:fixed;
+    top:130px;
+    right: 50px;
+}
+.glx-right ul li{
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+.glx-right ul li a{
+    color: #333;
+}
+.glx-right ul li a:hover{
+    color: #22c233;
+}

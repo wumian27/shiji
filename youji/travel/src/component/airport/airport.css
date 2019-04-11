@@ -1,0 +1,386 @@
+@charset "utf-8";
+#container {
+	width: 1263px;
+	margin: 30px auto;
+}
+#container .sidebar {
+	width: 340px;
+	float: right;
+}
+#container .sidebox {
+	border: 1px solid #eee;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+#container .sidebox h2 {
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	color: #666;
+	text-align: left;
+}
+#container .tag {
+	padding: 10px 0;
+}
+#container .tag li {
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	margin: 2px 0;
+	background-color: #eee;
+	text-align: left;
+	text-indent: 8px;
+}
+#container .tag a {
+	display: block;
+	color: #999;
+}
+#container .tag a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+#container .figure {
+	padding: 10px 0;
+}
+#container figure {
+	display: inline-block;
+	padding: 4px;
+	color: #666;
+}
+#container .box {
+	padding: 10px 0;
+}
+#container .box a {
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	margin: 2px 0;
+	text-align: left;
+	text-indent: 35px;
+	color: #999;
+}
+#container .list {
+	width: 910px;
+	float: left;
+}
+#container .infor {
+	height: 45px;
+	line-height: 45px;
+	background-color: #eee;
+	margin: 0 0 20px 0;
+}
+#container .information .left {
+	display: inline-block;
+	float: left;
+}
+#container .information .left li {
+	display: inline-block;
+	width: 150px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+}
+#container .information .left li:first-child {
+	background-color: #fff;
+	border-top: 2px solid #458b00;
+	position: relative;
+	left: 1px;
+}
+#container .information .left a {
+	color: #666;
+}
+#container .information .right {
+	display: inline-block;
+	padding: 0 20px 0 0;
+	float: right;
+}
+#container .information .right li {
+	display: inline-block;
+	width: 60px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+}
+#container .information .right a {
+	padding: 3px 8px;
+	color: #666;
+}
+#container .information .right a.selected, #container .information .right a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+#container .tour hgroup {
+	width: 300px;
+}
+#container .tour h2 {
+	font-size: 24px;
+	color: #333;
+	font-weight: normal;
+	padding: 10px 0 10px 25px;
+}
+#container .tour h3 {
+	font-size: 16px;
+	color: #666;
+	line-height: 1.5;
+	font-weight: normal;
+	padding: 10px 0 10px 25px;
+}
+#container .tour ol {
+	padding: 0 0 0 25px;
+	color: #666;
+	line-height: 2;
+}
+#container .tour mark {
+	background-color: #fff;
+	border: 1px solid #458b00;
+	border-radius: 4px;
+	padding: 0 5px;
+	color: #458b00;
+}
+#container .tour .disc span {
+	display: block;
+	transform: rotate(45deg);
+	width: 52px;
+	height: 52px;
+	padding: 5px 0 0 0;
+	text-indent: 7px;
+	font-size: 14px;
+	color: #ff7a4d;
+}
+#container .tour footer {
+	width: 528px;
+	height: 30px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-indent: 25px;
+	background-color: #fafafa;
+	position: absolute;
+	bottom: 0;
+}
+#container .tour time {
+	color: #458b00;
+}
+#container .information .more, #container .scenery .more {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fafafa;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	color: #666;
+}
+#container .scenery figure {
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 4px;
+	border-radius: 4px;
+	margin: 15px 5px 15px 0;
+	width: 435px;
+	text-align: left;
+}
+#container .scenery figcaption {
+	text-align: center;
+	padding: 5px 0;
+}
+#container .about p {
+	line-height: 2;
+	margin: 20px 0;
+}
+#container .about address {
+	line-height: 1.6;
+	margin: 20px 0;
+	font-style: normal;
+}
+.bigarea{
+    width: 100%;
+    min-width: 1263px;
+    /* border: 1px solid #f40; */
+    display: flex;
+}
+.ticket{
+    width: 910px;
+    /* border: 1px solid #ccc; */
+    color: #666;
+    padding: 0 30px;
+   position: relative;
+}
+.yu{
+    height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 51px 0;
+	font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+.type{
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+}
+.type mark {
+    color: #fff;
+}
+.markActive{
+    background-color: #458b00;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin: 0 10px 0 16px
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    font-size: 20px;
+}
+
+.form_button{
+    text-align: right;
+}
+.submit{
+    width: 88px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f60;
+    border: none;
+    position: absolute;
+    right: 99px;
+    top: 161px;
+    cursor: pointer;
+}
+.showprice{
+   /* height: 100%; */
+   /* width: 100%; */
+   width:430px; 
+   /* border: 1px solid blue; */
+   margin-left: 3px;
+}
+
+.price_left{
+	width: 100%;
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+	background: #eee;
+	margin-top: 18px;
+  }
+  .price_item{
+	width: 211px;
+    height: 196px;
+    /* border: 1px solid blueviolet; */
+    position: relative;
+	background: #fff;
+	margin-top:10px;
+  }
+  .price_item:hover{
+	  border: 1px solid #f40;
+  }
+  .img{
+	width: 100%;
+	height: 113px;
+  }
+  .price_price{
+	 position: absolute;
+	 right: 10px;
+	  color: #b00;
+  }
+  .price_price em{
+	margin-left: 10px;
+  }
+  .price_price .btn{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: #9ea8ae;
+	background-color: #f0f3f4;
+	width: 42px;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	display: inline-block;
+  }
+  .sh_sh{
+	margin: 5px 0;
+  }
+  .price_date{
+	margin: 0 8px;
+	color: #999;
+  }
+  .show{
+	  width: 820px;
+	  height: 600px;
+	  /* border: 1px solid #ccc; */
+	  padding: 0 1px;
+	  margin-bottom: 80px;
+  }
+table th{
+	width: 205px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 16px;
+}
+table td {
+    height: 70px;
+    text-align: center;
+    font-size: 15px;
+}
+.th{
+	border: 1px solid #ccc;
+	background: #eee;
+}
+.tbody{
+	border: 1px solid #ccc;
+}
+
+.tbody_btn{
+	display: inline-block;
+    width: 55px;
+	height: 33px;
+	border-radius: 4px;
+	border: none;
+	background:#ff9913;
+}
+.show_price{
+	color: #BB0000;
+}
+
+.piao_add{
+	display: inline-block; 
+	height: 35px;
+	width: 20px;
+	text-align: center;
+	font-size: 32px;
+	color: #999;
+	float: right;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.piao_jian{
+	float: left;
+	margin-left: 10px;
+}
+.piao_num{
+	text-align: center;
+	display: inline-block;
+	width: 194px;
+	height: 35px;
+	border: 1px solid #ccc;
+	line-height: 33px;
+}
+.gray{
+	background: gray !important;
+}

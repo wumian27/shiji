@@ -1,0 +1,78 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.introduce {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    background-image: url(/img/intrude.png);
+    height: 78px;
+    width: 78px;
+    overflow: hidden;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: -0px -95px;
+}
+
+.introduce h3 {
+    margin: 0 12px 12px 0;
+    padding: 13px 10px 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center
+}
+
+.zhai {
+    width: 1015px;
+    margin: 30px 20px 0 120px;
+
+}
+
+.important {
+    background: #eee;
+    margin: 10px 0 10px 0;
+    padding: 4px 0 4px 10px;
+    font-size: 20px;
+}
+
+.xing div {
+    display: inline-block;
+    margin: 0 30px 0 0;
+    margin-left: 8px;
+}
+
+.xing .qian {
+    color: #999;
+}
+
+.tese {
+    margin-top: 20px;
+}
+
+.xin {
+    font-size: 13px;
+    margin-left: 8px;
+}
+.scence-detail{
+    width: 960px !important;
+    margin-top: 100px !important;
+}
+.piao_ad{
+	display: inline-block; 
+	height: 35px;
+	width: 20px;
+	text-align: center;
+	color: #999;
+	cursor: pointer;
+}
+
+.piao_n{
+	text-align: center;
+	display: inline-block;
+    color: #999;
+    margin-left: 10px;
+}

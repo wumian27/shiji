@@ -1,0 +1,87 @@
+.center-container{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 80px;
+}
+.center-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+.center-wrapper .ul{
+    background-color: #1db44e;
+    width: 180px;
+    text-align: center;
+    padding: 10px;
+}
+.center-wrapper .ul li{
+    margin-top: 15px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.center-right{
+    height: 600px;
+    /* border: 1px solid red; */
+    margin-left: 20px;
+}
+.center-form{
+    padding-top: 20px;
+}
+.center-form p{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.center-form label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+   margin-right: 30px;
+   color: #666;
+   line-height: 1.5px;
+   font-size: 15px;
+}
+.center-btn{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #ff8800;
+    color: #fff;
+    margin-left: 100px;
+}
+.center-form .bao,.xiao{
+    margin-left: 30px;
+}
+.center-form .xiao{
+    background: #fff;
+    color: #666;
+    border: 1px solid #eee;
+}
+.center-form input{
+    width: 350px;
+    outline: none;
+    border: 1px solid #eee;
+    height: 35px;
+    text-indent: 1em
+
+}
+.mima input{
+    width: 200px;
+}
+.none{
+    display: none;
+}
+.buy_cancel{
+    color: #666;
+    background: #f40;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    width: 50px;
+    cursor: pointer;
+}

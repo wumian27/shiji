@@ -85,3 +85,76 @@
     width: 50px;
     cursor: pointer;
 }
+.bck{
+    width: 800px;
+    height: 300px;
+    position: relative;
+}
+.bck-input{
+     width: 500px;
+     height: 40px;
+     border: 1px solid #999;
+     outline: none;
+     border-radius: 15px;
+     position: absolute;
+     text-indent: 1em;
+     bottom: 50px;
+     left: 150px;
+     font-size: 16px;
+     line-height: 43px;
+}
+.bck-img{
+    width: 100%;
+    height: 300px;
+}
+.bck-form{
+    position: absolute;
+    top:100px;
+    left:320px;
+}
+.bck-file{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+.bck-p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.file{
+    position: absolute;
+    top:0;
+    height:60px;
+    opacity: 0;
+}
+#edit{
+    word-break:break-all;
+    word-wrap:break-word;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    outline: none;
+   text-indent: 2em;
+}
+.bck-bott{
+    margin-top:30px
+}
+
+#edit:empty:before{
+    content:attr(placeholder);
+    font-style: italic;
+    font-size: 16px;
+}
+#edit:focus{
+    content:none;
+}
+.bcktn-form{
+    position: fixed;
+    bottom: 30px;
+}
+.btnfile{
+    position: absolute;
+    left:0;
+    height: 30px;
+    opacity: 0;
+}

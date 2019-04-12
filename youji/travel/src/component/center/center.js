@@ -11,6 +11,8 @@ class Center extends Component {
                 airport: false,
                 ziliao: false,
                 pwd: false,
+                youji:false,
+                watch:false
             },
             input: false,
             radioValue: '',
@@ -193,19 +195,19 @@ class Center extends Component {
         })
     }
      //图片提交
-    // tijiao(e){
-    //     e.preventDefault();
-    //     let formData = new FormData();
-    //     console.log(formData);
-    //     formData.append('file', this.state.file);
-    //     axios.post("http://localhost:3001/tu",formData, {headers: {
-    //       'Content-Type': 'multipart/form-data'}
-    //     }).then(res =>{
-    //       console.log(res)
-    //     })
-    //     console.log(22);
+    tijiao(e){
+        // e.preventDefault();
+        let formData = new FormData();
+        console.log(formData);
+        formData.append('file', this.state.file);
+        axios.post("http://localhost:3001/picture",formData, {headers: {
+          'Content-Type': 'multipart/form-data'}
+        }).then(res =>{
+          console.log(res)
+        })
+        console.log(22);
         
-    //   }
+      }
     render() {
         return <div>
             <Head></Head>
@@ -216,7 +218,7 @@ class Center extends Component {
                         <li onClick={() => { this.select('airport') }}>机票订单</li>
                         <li onClick={() => { this.select('ziliao') }}>个人资料</li>
                         <li onClick={() => { this.select('pwd') }}>密码设置</li>
-                        <li>发表游记</li>
+                        <li onClick={() => {this.select('youji')}}>发表游记</li>
                         <li onClick={() => { this.select('watch') }}>查看游记</li>
                     </ul>
                     <div className="center-right">
@@ -369,7 +371,7 @@ class Center extends Component {
                         </div>
 
 
-                        {/* <div className={this.state.show.pwd ? "" : "none"}>
+                        <div className={this.state.show.pwd ? "" : "none"}>
                             <form className="center-form">
                                 <p>
                                     <label htmlFor="">当前密码:</label>
@@ -387,10 +389,10 @@ class Center extends Component {
                                     <span className="center-btn" onClick={()=>{this.submitUpdate()}} >修改</span>
                                 </p>
                             </form>
-                        </div> */}
+                        </div>
 
 
-                        <div className={this.state.show.pwd ? "" : "none"}>
+                        <div className={this.state.show.youji ? "" : "none"}>
                             <div className="youji">
                                 <div className="bck">
                                     <img src="/img/luxian/default_bg.png" className="bck-img" />
@@ -403,7 +405,7 @@ class Center extends Component {
                                             type="file"
                                             name="upload"
                                             multiple="multiple"
-                                            onChange={(e) => { this.file(e) }} />
+                                            onChange={(e) => { this.tijiao(e) }} />
                                         {/* <button type="submit" onClick={(e) => { this.tijiao(e) }}>提交</button> */}
                                     </form>
                                 </div>
@@ -417,11 +419,44 @@ class Center extends Component {
                                             type="file"
                                             name="upload"
                                             multiple="multiple"
-                                            onChange={(e) => { this.file(e) }} />
+                                            onClick={(e) => { this.tijiao(e) }} />
                                         {/* <button type="submit" onClick={(e) => { this.tijiao(e) }}>提交</button> */}
                                     </form>
                                 </div>
                             </div>
+                        </div>
+
+
+                        <div className={this.state.show.watch ? "" : "none"}>
+                            <table >
+                                <tbody className="th">
+                                    <tr>
+                                        <th>产品信息</th>
+                                        <th>数量</th>
+                                        <th>时间</th>
+                                        <th>价格</th>
+                                    </tr>
+                                </tbody>
+                              
+                                        <tbody className="tbody" >
+                                            <tr>
+                                                <td>v.scence</td>
+                                                <td>
+
+                                                </td>
+                                                <td></td>
+                                                <td className="show_price">￥v.money
+                                                    <button
+                                                        onClick={() => { this.cancelTicket() }}
+                                                        className="buy_cancel"
+                                                    >取消</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                   
+
+                            </table>
                         </div>
                     </div>
                 </div>

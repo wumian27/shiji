@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
     // console.log('22');
     
     form.parse(req, function(err, fields, files) {
-        // console.log(files);
+        // console.log(files.file);
         
         const png = path.extname(files.file.name);
         const uuidiv = uuidv1();

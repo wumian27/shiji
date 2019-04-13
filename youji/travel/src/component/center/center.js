@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Head from '../header/Head'
 import axios from 'axios'
+import {message} from 'antd'
 import './center.css'
 class Center extends Component {
     constructor(props) {
@@ -24,7 +25,9 @@ class Center extends Component {
                 sex: ""
             },
             sceneTicket: [],
-            airportTicket: []
+            airportTicket: [],
+            img:"/img/luxian/default_bg.png",
+            header:''
         }
     }
     componentDidMount() {
@@ -195,18 +198,83 @@ class Center extends Component {
         })
     }
      //图片提交
-    tijiao(e){
+    tijiao(e,arg){
         // e.preventDefault();
-        let formData = new FormData();
-        console.log(formData);
-        formData.append('file', this.state.file);
-        axios.post("http://localhost:3001/picture",formData, {headers: {
-          'Content-Type': 'multipart/form-data'}
-        }).then(res =>{
-          console.log(res)
-        })
-        console.log(22);
+        let file = e.target.files[0];
+        if(file){
+            let that =this;
+            var reads= new FileReader();
+            // f=document.getElementById('file').files[0];
+            reads.readAsDataURL(file);
+            reads.onload=function (e) {
+                // document.getElementById('show').src=this.result;
+                if(arg==='bck'){
+                    that.setState({
+                        img:this.result
+                    })
+                }
+                
+            };
+            let edit  =document.getElementById('edit')
+            let formData = new FormData();
+            console.log(file);
+            formData.append('file', file);
+            axios.post("http://localhost:3001/picture",formData, {headers: {
+              'Content-Type': 'multipart/form-data'}
+            }).then(res =>{
+              if(res.data.code === 1){
+                  if(arg === 'content'){
+                    let img =document.createElement('img');
+                    img.src = `http://localhost:3001/images/${res.data.path}`;
+                    edit.appendChild(img)
+                  }else{
+                    this.setState({
+                        img:`http://localhost:3001/images/${res.data.path}`
+                    })
+                  }
+                 
+              }
+            })
+           
+        }
         
+        
+        
+      }
+ 
+      changeHeader(e){
+        this.setState({
+            header:e.target.value
+        })
+      }
+      //发表游记
+      submitImg(){
+          let date = new Date();
+          let t =document.getElementById('edit');
+         let  content = t.innerHTML;
+         
+          if(this.state.header.trim()===""){
+              message.warn('标题不能为空')
+          }else{
+            axios.post('http://localhost:3001/youji/add', {
+                uid: "18718180036",
+                content:content,
+                date:date,
+                header:this.state.header,
+                headerImg:this.state.img
+            }).then(res => {
+              if(res.data.code === 1){
+                  message.success('发表成功')
+                   t.innerHTML=""
+                  this.setState({
+                       header:'',
+                       img:"/img/luxian/default_bg.png"
+                  })
+              }
+    
+            })
+          }
+
       }
     render() {
         return <div>
@@ -270,7 +338,7 @@ class Center extends Component {
                                 </tbody>
                                 {
                                     this.state.airportTicket.map((v, index) => {
-                                        return <tbody className="tbody" key={v._id} >
+                                        return <tbody className="tbody" key={index} >
                                             <tr>
                                                 <td>{v.start}</td>
                                                 <td>{this.formatTime(v.time) + " " + v.startTime}
@@ -395,8 +463,8 @@ class Center extends Component {
                         <div className={this.state.show.youji ? "" : "none"}>
                             <div className="youji">
                                 <div className="bck">
-                                    <img src="/img/luxian/default_bg.png" className="bck-img" />
-                                    <input type="text" className="bck-input" placeholder="填写标题" />
+                                    <img src={this.state.img} className="bck-img" />
+                                    <input value={this.state.header} onChange={(e)=>{this.changeHeader(e)}} type="text" className="bck-input" placeholder="填写标题" />
                                     <form className="bck-form" >
                                         <img src="/img/luxian/set_head_pic.png" className="bck-file" />
                                         <p className="bck-p"> 设置封面</p>
@@ -405,12 +473,12 @@ class Center extends Component {
                                             type="file"
                                             name="upload"
                                             multiple="multiple"
-                                            onChange={(e) => { this.tijiao(e) }} />
+                                            onChange={(e) => { this.tijiao(e,'bck') }} />
                                         {/* <button type="submit" onClick={(e) => { this.tijiao(e) }}>提交</button> */}
                                     </form>
                                 </div>
                                 <div className="bck-bott">
-                                    <div class="ql-editor ql-blank" id="edit" data-gramm="false" contenteditable="true" placeholder="在这里添加旅游心得"></div>
+                                    <div className="ql-editor ql-blank" id="edit" data-gramm="false" contentEditable="true" placeholder="在这里添加旅游心得"></div>
                                     <form className="bcktn-form" >
                                         <img src="/img/luxian/set_head_pic.png" className="bck-file" />
                                         <span>选择照片</span>
@@ -419,9 +487,13 @@ class Center extends Component {
                                             type="file"
                                             name="upload"
                                             multiple="multiple"
-                                            onClick={(e) => { this.tijiao(e) }} />
-                                        {/* <button type="submit" onClick={(e) => { this.tijiao(e) }}>提交</button> */}
+                                            onChange={(e) => { this.tijiao(e,'content') }} />
+                                        
                                     </form>
+                                    <button 
+                                    className="fabiao"
+                                    type="submit" 
+                                    onClick={(e) => { this.submitImg(e) }}>发表游记</button>
                                 </div>
                             </div>
                         </div>

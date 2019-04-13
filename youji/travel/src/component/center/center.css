@@ -137,7 +137,8 @@
    text-indent: 2em;
 }
 .bck-bott{
-    margin-top:30px
+    margin-top:30px;
+    max-width: 800px;
 }
 
 #edit:empty:before{
@@ -148,6 +149,9 @@
 #edit:focus{
     content:none;
 }
+#edit img{
+    max-width: 800px;
+}
 .bcktn-form{
     position: fixed;
     bottom: 30px;
@@ -157,4 +161,17 @@
     left:0;
     height: 30px;
     opacity: 0;
+}
+.fabiao{
+    width: 100px;
+    height: 40px;
+    background: green;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 200px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }

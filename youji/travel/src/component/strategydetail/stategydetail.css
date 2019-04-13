@@ -68,6 +68,7 @@
     border-top: none;
     border-bottom: none;
     padding: 0 30px;
+    cursor: pointer;
 }
 .detail-content{
     width: 1200px;
@@ -82,7 +83,7 @@
     display: inline-block;
 }
 
-.detail-text{
+#reft p,#reft span{
     padding-bottom: 10px;
     word-break: break-all;
     font-size: 16px;
@@ -91,7 +92,7 @@
     text-align: left;
     margin-top: 20px;
 }
-.detail-img{
+#reft img{
     width: 100%;
 }
 .detail-header{
@@ -114,9 +115,7 @@
     white-space: nowrap;
     margin-bottom: 30px;
 }
-.detail-comment{
 
-}
 .com-content{
     display: flex;
 }
@@ -136,7 +135,7 @@
     margin-right: 30px;
 }
 .detail-textarea{
-     width: 820px;
+     width: 814px;
      height: 150px;
      text-indent: 4px;
      font-size: 16px;
@@ -181,4 +180,7 @@
 }
 .detail-right ul li a:hover{
     text-decoration:underline;
+}
+.shape_star li a {
+    color: rgba(0, 0, 0, 0.65);
 }

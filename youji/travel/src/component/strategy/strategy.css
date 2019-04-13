@@ -86,8 +86,12 @@
     color: #999;
     height: 48px;
     font-size: 14px;
+    height: 70px;
     overflow: hidden;
-    height: 73px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 .footer-scence{
     height:120px;

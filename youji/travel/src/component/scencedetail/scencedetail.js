@@ -86,7 +86,7 @@ class Scencedetail extends Component {
                 <Head></Head>
                 <div id="container" className="scence-detail">
                     <figure className="tour ">
-                        <img src="/img/tour1.jpg" alt="曼谷-芭提雅6日游" />
+                        <img src={"/img/shou/" + this.state.detail[0].src} alt="曼谷-芭提雅6日游" />
                         <figcaption>
                             <article>
                                 <header>

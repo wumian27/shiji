@@ -27,7 +27,7 @@ ReactDOM.render(
         <Route path="/password" component={QueryPwd}></Route>
         <Route path="/target" component={Target}></Route>
         <Route path="/airport" component={Airport}></Route>
-        <Route path = "/strategy" component = {Strategy}></Route>
+        <Route path= "/strategy" component = {Strategy}></Route>
         <Route path="/strategydetail" component={Stategydetail}></Route>
         <Route path="/scencedetail" component={Scencedetail}></Route>
         <Route path="/gongluexiang" component={Gongluexiang}></Route>

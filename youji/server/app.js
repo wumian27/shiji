@@ -19,7 +19,8 @@ let queryStategyRouter = require('./routes/strategy/strategy');
 let senceSearchRouter = require('./routes/jingdian/searchSence');
 let ticketAddRouter = require('./routes/ticket/add');
 let dingdanRouter = require('./routes/center/menpiao');
-let pictureRouter = require('./routes/tupiao')
+let pictureRouter = require('./routes/tupiao');
+let youjiAddRouter = require('./routes/youji/add')
 var app = express();
 
 // view engine setup
@@ -56,7 +57,8 @@ app.use('/strategy/query',queryStategyRouter);
 app.use('/sencesearch',senceSearchRouter);
 app.use('/ticket',ticketAddRouter);
 app.use('/center/ticket',dingdanRouter);
-app.use('/picture',pictureRouter)
+app.use('/picture',pictureRouter);
+app.use('/youji',youjiAddRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
